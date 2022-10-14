@@ -1,0 +1,2 @@
+node Xascjs/test.js
+jest --ci --testTimeout 60000 test/test.js

@@ -1,0 +1,45 @@
+Source: node-rollup-plugin-terser
+Section: javascript
+Priority: optional
+Maintainer: Debian Javascript Maintainers <pkg-javascript-devel@lists.alioth.debian.org>
+Uploaders:
+ Jonas Smedegaard <dr@jones.dk>,
+ Pirate Praveen <praveen@debian.org>,
+Testsuite: autopkgtest-pkg-nodejs
+Build-Depends:
+ debhelper-compat (= 13),
+ dh-sequence-nodejs,
+ jest <!nocheck>,
+ node-babel-core (>= 7) <!nocheck>,
+ node-jest-worker (>= 27~),
+ node-rollup <!nocheck>,
+ node-serialize-javascript <!nocheck>,
+ node-terser <!nocheck>,
+ nodejs (>= 6),
+Standards-Version: 4.6.0
+Homepage: https://github.com/TrySound/rollup-plugin-terser
+Vcs-Git: https://salsa.debian.org/js-team/node-rollup-plugin-terser.git
+Vcs-Browser: https://salsa.debian.org/js-team/node-rollup-plugin-terser
+Rules-Requires-Root: no
+
+Package: node-rollup-plugin-terser
+Architecture: all
+Depends:
+ node-babel-code-frame (>= 7),
+ node-babel-parser (>= 7),
+ node-jest-worker (>= 27~),
+ node-serialize-javascript,
+ node-terser,
+ nodejs,
+ ${misc:Depends},
+Provides:
+ ${nodejs:Provides},
+Enhances:
+ rollup,
+Description: Rollup plugin to minify generated es bundle
+ This plugin for rollup uses terser to minify generated bundle and supports
+ ES6.
+ .
+ Also includes NodeJS module ascjs.
+ .
+ Node.js is an event-based server-side JavaScript engine.

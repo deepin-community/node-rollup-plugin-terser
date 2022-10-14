@@ -1,0 +1,16 @@
+version=4
+# check: uscan --report
+# update: gbp import-orig --upstream-vcs-tag=vX.Y.Z --uscan
+
+opts=\
+filenamemangle=s/.*?(@ANY_VERSION@@ARCHIVE_EXT@)/@PACKAGE@-$1/,\
+dversionmangle=auto \
+https://github.com/TrySound/rollup-plugin-terser/tags \
+.*?@ANY_VERSION@@ARCHIVE_EXT@ group
+
+opts=\
+component=Xascjs,\
+filenamemangle=s/.*?v?(@ANY_VERSION@@ARCHIVE_EXT@)/ascjs-$1/,\
+dversionmangle=auto \
+https://github.com/WebReflection/ascjs/tags \
+.*?v?@ANY_VERSION@@ARCHIVE_EXT@ group

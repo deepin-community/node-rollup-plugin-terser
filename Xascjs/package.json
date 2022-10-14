@@ -1,0 +1,36 @@
+{
+  "name": "ascjs",
+  "version": "5.0.1",
+  "description": "ES2015 to CommonJS import/export transformer",
+  "bin": "bin.js",
+  "main": "index.js",
+  "scripts": {
+    "coveralls": "nyc report --reporter=text-lcov | coveralls",
+    "test": "nyc node test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/WebReflection/ascjs.git"
+  },
+  "keywords": [
+    "cjs",
+    "esm",
+    "transpile",
+    "convert",
+    "safe",
+    "module"
+  ],
+  "author": "Andrea Giammarchi",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/WebReflection/ascjs/issues"
+  },
+  "homepage": "https://github.com/WebReflection/ascjs#readme",
+  "dependencies": {
+    "@babel/parser": "^7.12.5"
+  },
+  "devDependencies": {
+    "coveralls": "^3.1.0",
+    "nyc": "^15.1.0"
+  }
+}

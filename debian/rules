@@ -1,0 +1,8 @@
+#!/usr/bin/make -f
+
+%:
+	dh $@
+
+execute_after_dh_fixperms:
+	sed -i -e '1s|^#!/usr/bin/env node|#!/usr/bin/node|' debian/node-rollup-plugin-terser/usr/share/nodejs/ascjs/bin.js
+	chmod +x debian/node-rollup-plugin-terser/usr/share/nodejs/ascjs/bin.js

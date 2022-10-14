@@ -1,0 +1,84 @@
+node-rollup-plugin-terser (7.0.2+~5.0.1-2) unstable; urgency=medium
+
+  * provide executable script ascjs;
+    mention ascjs in lng description;
+    depend on nodejs
+
+ -- Jonas Smedegaard <dr@jones.dk>  Thu, 04 Nov 2021 22:44:43 +0100
+
+node-rollup-plugin-terser (7.0.2+~5.0.1-1) unstable; urgency=medium
+
+  * embed, test, install, and provide NodeJS module ascjs
+  * simplify source helper script copyright-check
+  * update copyright info:
+    + use Reference field (not License-Reference);
+      tighten lintian overrides
+    + update coverage
+    + add source URI for ascjs
+  * add patch 2003 to require nonlocal ascjs module in test
+
+ -- Jonas Smedegaard <dr@jones.dk>  Thu, 04 Nov 2021 19:30:12 +0100
+
+node-rollup-plugin-terser (7.0.2-7) unstable; urgency=medium
+
+  * Team upload
+  * Update standards version to 4.6.0, no changes needed.
+  * Back to unstable
+
+ -- Yadd <yadd@debian.org>  Mon, 27 Sep 2021 14:23:52 +0200
+
+node-rollup-plugin-terser (7.0.2-6) experimental; urgency=medium
+
+  * Team upload
+  * Add fix for jest-worker ≥ 27
+
+ -- Yadd <yadd@debian.org>  Sun, 26 Sep 2021 16:49:19 +0200
+
+node-rollup-plugin-terser (7.0.2-5) unstable; urgency=medium
+
+  * Team upload
+  * Increase test timeout (Closes: #981474)
+  * Remove obsolete field Contact from debian/upstream/metadata
+    (already present in machine-readable debian/copyright).
+  * Bump debhelper compatibility level to 13
+  * Add "Rules-Requires-Root: no"
+
+ -- Xavier Guimard <yadd@debian.org>  Sun, 31 Jan 2021 19:35:00 +0100
+
+node-rollup-plugin-terser (7.0.2-4) unstable; urgency=medium
+
+  * have binary package enhance rollup
+  * fix build-depend on recent node-babel-core
+    (not node-babel7);
+    depend on recent node-babel-code-frame
+    (not node-babel7)
+
+ -- Jonas Smedegaard <dr@jones.dk>  Sun, 20 Dec 2020 03:31:35 +0100
+
+node-rollup-plugin-terser (7.0.2-3) unstable; urgency=medium
+
+  * add patch 2001 to use older Nodejs module terser 4.x
+  * tighten to not tolerate testsuite errors
+
+ -- Jonas Smedegaard <dr@jones.dk>  Sun, 13 Dec 2020 20:45:10 +0100
+
+node-rollup-plugin-terser (7.0.2-2) unstable; urgency=medium
+
+  * unconditionally check testsuite during build
+    (not only when targeted experimental),
+    but continue to tolerate failure
+    (until new enough terser is in Debian);
+    build-depend on node-serialize-javascript
+  * stop set custom NODE_PATH during build
+  * simplify rules;
+    build-depend on dh-sequence-nodejs (not pkg-js-tools)
+
+ -- Jonas Smedegaard <dr@jones.dk>  Sun, 06 Dec 2020 16:09:22 +0100
+
+node-rollup-plugin-terser (7.0.2-1) experimental; urgency=low
+
+  [ Jonas Smedegaard & Pirate Praveen ]
+  * initial release;
+    closes: #954251
+
+ -- Jonas Smedegaard <dr@jones.dk>  Thu, 03 Dec 2020 16:54:19 +0100
