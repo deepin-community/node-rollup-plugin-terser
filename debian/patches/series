@@ -1,3 +1,4 @@
 2001_use_older_terser.patch
 2002_fix-for-jest-27.patch
 2003_ascjs_test_nonlocal_module.patch
+2004_fix-for-jest-29.patch
