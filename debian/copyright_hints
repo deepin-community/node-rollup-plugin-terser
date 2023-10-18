@@ -18,13 +18,17 @@ Files: Xascjs/.npmignore
  debian/copyright-check
  debian/docs
  debian/gbp.conf
- debian/patches/2001_use_older_terser.patch
+ debian/node-rollup-plugin-terser.links
+ debian/nodejs/root_modules
  debian/patches/2002_fix-for-jest-27.patch
+ debian/patches/2003_ascjs_test_nonlocal_module.patch
  debian/patches/README
  debian/patches/series
  debian/rules
  debian/salsa-ci.yml
  debian/source/format
+ debian/source/lintian-overrides
+ debian/tests/pkg-js/files
  debian/tests/pkg-js/test
  debian/upstream/metadata
  debian/watch
@@ -68,12 +72,6 @@ License: Expat
 Files: Xascjs/LICENSE.txt
 Copyright: 2017, Andrea Giammarchi, @WebReflection
 License: ISC
- FIXME
-
-Files: debian/source/lintian-overrides
-Copyright: GPL-3+
-  gpl-3+
-License: UNKNOWN
  FIXME
 
 Files: README.md

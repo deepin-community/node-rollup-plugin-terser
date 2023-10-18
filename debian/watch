@@ -9,6 +9,7 @@ https://github.com/TrySound/rollup-plugin-terser/tags \
 .*?@ANY_VERSION@@ARCHIVE_EXT@ group
 
 opts=\
+ctype=nodejs,\
 component=Xascjs,\
 filenamemangle=s/.*?v?(@ANY_VERSION@@ARCHIVE_EXT@)/ascjs-$1/,\
 dversionmangle=auto \

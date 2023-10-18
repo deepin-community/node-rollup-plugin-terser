@@ -4,22 +4,6 @@ Author: Jonas Smedegaard <dr@jones.dk>
 Last-Update: 2020-12-13
 ---
 This patch header follows DEP-3: http://dep.debian.net/deps/dep3/
---- a/transform.js
-+++ b/transform.js
-@@ -2,7 +2,12 @@
- 
- const transform = (code, optionsString) => {
-   const options = eval(`(${optionsString})`);
--  return minify(code, options).then(result => ({ result, nameCache: options.nameCache }));
-+  const result = minify(code, options);
-+  if (result.error) {
-+    throw result.error;
-+  } else {
-+    return { result, nameCache: options.nameCache };
-+  }
- };
- 
- exports.transform = transform;
 --- a/test/__snapshots__/test.js.snap
 +++ b/test/__snapshots__/test.js.snap
 @@ -9,6 +9,7 @@
