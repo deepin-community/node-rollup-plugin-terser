@@ -9,14 +9,13 @@ Testsuite: autopkgtest-pkg-nodejs
 Build-Depends:
  debhelper-compat (= 13),
  dh-sequence-nodejs,
- jest <!nocheck>,
+ jest (>= 29) <!nocheck>,
  node-babel-core (>= 7) <!nocheck>,
  node-jest-worker (>= 27~),
  node-rollup <!nocheck>,
  node-serialize-javascript <!nocheck>,
- node-terser <!nocheck>,
- nodejs (>= 6),
-Standards-Version: 4.6.0
+ node-terser (>= 5) <!nocheck>,
+Standards-Version: 4.6.1
 Homepage: https://github.com/TrySound/rollup-plugin-terser
 Vcs-Git: https://salsa.debian.org/js-team/node-rollup-plugin-terser.git
 Vcs-Browser: https://salsa.debian.org/js-team/node-rollup-plugin-terser
@@ -29,16 +28,15 @@ Depends:
  node-babel-parser (>= 7),
  node-jest-worker (>= 27~),
  node-serialize-javascript,
- node-terser,
- nodejs,
+ node-terser (>= 5),
  ${misc:Depends},
 Provides:
  ${nodejs:Provides},
 Enhances:
  rollup,
 Description: Rollup plugin to minify generated es bundle
- This plugin for rollup uses terser to minify generated bundle and supports
- ES6.
+ This plugin for rollup uses terser
+ to minify generated bundle and supports ES6.
  .
  Also includes NodeJS module ascjs.
  .
